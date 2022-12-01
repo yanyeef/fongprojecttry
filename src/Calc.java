@@ -115,6 +115,14 @@ public class Calc {
         return first + " " + sign + " " + second + " = " +"\n"+ twoVal();
     }
 
+    public double factoral(){
+        double result = 1;
+        while( first >1) {
+            result = result * first;
+            first--;
+        }
+        return result;
+    }
 
 
 

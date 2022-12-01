@@ -1,6 +1,9 @@
+
 import java.util.Scanner;
+
+
 public class CalcRunner {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         String expression = "";
         System.out.print("Type in a value or sign: ");
@@ -38,6 +41,9 @@ public class CalcRunner {
                 System.out.println(twoNumbers.toString2());
             }
 
+
+            }
+
         }
-    }
+
 }

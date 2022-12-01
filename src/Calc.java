@@ -1,3 +1,6 @@
+/**
+ * The Calc class represents a Calculator with values and math sign
+ */
 public class Calc {
     private double first;
     private double second;
@@ -15,7 +18,16 @@ public class Calc {
     public Calc(double one, String sign){
         this.first = one;
         this.sign = sign;
+    }
+// if user just types = it will return 0
+    public void zero(){
+        System.out.println("=" + 0);
+    }
 
+    public Calc(){
+        this.first =0;
+        this.sign = "+";
+        this.second = 0;
     }
 
     public Calc(String expression){
@@ -91,6 +103,10 @@ public class Calc {
             result = pow();
         }
         return first + " "+ sign + " " + second + " = "+ result;
+    }
+
+    public String toString() {
+
     }
 
 

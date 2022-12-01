@@ -17,7 +17,11 @@ public class CalcRunner {
             System.out.println("How much values did you input: ");
             int numOfValues = scan.nextInt();
 
-            if (numOfValues == 1) {
+            if(numOfValues ==0){
+                Calc noValue = new Calc();
+                noValue.zero();
+            }
+           else if (numOfValues == 1) {
                 String single = expression.substring(expression.indexOf(" ") + 1, expression.indexOf("=") - 1);
                 double s = Double.parseDouble(single);
                 String math = expression.substring(0, expression.indexOf(" "));

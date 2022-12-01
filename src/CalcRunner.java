@@ -16,7 +16,6 @@ public class CalcRunner {
             System.out.println(expression);
             System.out.println("How much values did you input: ");
             int numOfValues = scan.nextInt();
-            double result = 0;
 
             if (numOfValues == 1) {
                 String single = expression.substring(expression.indexOf(" ") + 1, expression.indexOf("=") - 1);

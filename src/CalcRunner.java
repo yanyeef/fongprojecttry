@@ -13,8 +13,7 @@ public class CalcRunner {
         }
 
         if (input.equals("=")) {
-            System.out.println(expression);
-            System.out.println("How much values did you input: ");
+            System.out.print("How much values did you input: ");
             int numOfValues = scan.nextInt();
 
             if(numOfValues ==0){
@@ -26,7 +25,7 @@ public class CalcRunner {
                 double s = Double.parseDouble(single);
                 String math = expression.substring(0, expression.indexOf(" "));
                 Calc oneValue = new Calc(s, math);
-                System.out.println(oneValue.oneVal());
+                System.out.println(oneValue.toString1());
 
             } else if (numOfValues == 2) {
                 String firstValue = expression.substring(0, expression.indexOf(" "));
@@ -36,7 +35,7 @@ public class CalcRunner {
                 String sign = expression.substring(expression.indexOf(" ") + 1, expression.indexOf(" ") + 2);
 
                 Calc twoNumbers = new Calc(fV, sV, sign);
-                System.out.println(twoNumbers.twoVal());
+                System.out.println(twoNumbers.toString2());
             }
 
         }

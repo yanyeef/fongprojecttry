@@ -20,9 +20,7 @@ public class Calc {
         this.sign = sign;
     }
 // if user just types = it will return 0
-    public void zero(){
-        System.out.println("=" + 0);
-    }
+
 
     public Calc(){
         this.first =0;
@@ -32,6 +30,10 @@ public class Calc {
 
     public Calc(String expression){
         this.expression = expression;
+    }
+    public void zero(){
+        int zero = 0;
+        System.out.println("=" + zero);
     }
 
     public double add(){
@@ -75,7 +77,7 @@ public class Calc {
         return Math.pow(first, second);
     }
 
-    public String oneVal() {
+    public double oneVal() {
         double result =0;
         if (sign.equals("sqrt")){
             result = sqrt();
@@ -86,10 +88,10 @@ public class Calc {
         } else if(sign.equals("tan")){
             result = tan(radian(first));
         }
-        return sign +" " + first + " = "+ result;
+        return result;
     }
 
-    public String twoVal() {
+    public double twoVal() {
         double result = 0;
         if (sign.equals("+")) {
             result = add();
@@ -102,11 +104,15 @@ public class Calc {
         } else if (sign.equals("^")) {
             result = pow();
         }
-        return first + " "+ sign + " " + second + " = "+ result;
+        return result;
     }
 
-    public String toString() {
+    public String toString1() {
+        return sign + " " + first + " = " +"\n"+  oneVal();
+    }
 
+    public String toString2(){
+        return first + " " + sign + " " + second + " = " +"\n"+ twoVal();
     }
 
 

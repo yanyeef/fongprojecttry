@@ -25,7 +25,6 @@ public class CalcRunner {
                 System.out.println(oneValue.oneVal());
 
             } else if (numOfValues == 2) {
-
                 String firstValue = expression.substring(0, expression.indexOf(" "));
                 double fV = Double.parseDouble(firstValue);
                 String secValue = expression.substring(expression.indexOf(" ") + 3, expression.indexOf("=") - 1);

@@ -124,6 +124,23 @@ public class Calc {
         return result;
     }
 
+//    public double express(){
+//        String current = expression;
+//        double num =0;
+//        int space =0;
+//        for(int i =0; i < expression.length() && expression.substring(i, i+1).equals(" ");i ++){
+//            space++;
+//        }
+//        while(space !=0){
+//            double value = Double.parseDouble(expression.substring(0, expression.indexOf(" ")));
+//            current = expression.substring(expression.indexOf(" ")+ 2);
+//            num += value;
+//            space --;
+//        }
+//        return num;
+//
+//    }
+
 
 
 }

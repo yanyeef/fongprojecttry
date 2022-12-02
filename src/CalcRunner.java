@@ -6,16 +6,17 @@ public class CalcRunner {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
         String expression = "";
+        System.out.println("If you want sin, cos, tan, !, or sqrt, type out the sign on the first line, then type out the value");
         System.out.print("Type in a value or sign: ");
         String input = scan.nextLine();
         expression += input + " ";
-        while (!(input.equals("="))) {
+        while (!(input.contains("="))) {
             System.out.print("Type in a value or sign: ");
             input = scan.nextLine();
             expression += input + " ";
         }
 
-        if (input.equals("=")) {
+        if (input.contains("=")) {
             System.out.print("How much values did you input: ");
             int numOfValues = scan.nextInt();
 
@@ -40,6 +41,10 @@ public class CalcRunner {
                 Calc twoNumbers = new Calc(fV, sV, sign);
                 System.out.println(twoNumbers.toString2());
             }
+//            else {
+//               Calc express = new Calc(expression);
+//               System.out.println(express.express());
+//          }
 
 
             }

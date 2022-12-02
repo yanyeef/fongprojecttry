@@ -108,20 +108,28 @@ public class Calc {
     }
 
     public String toString1() {
-        return sign + " " + first + " = " +"\n"+  oneVal();
+        if(!sign.equals("!")) {
+            return sign + " " + first + " = " + "\n" + oneVal();
+        } else {
+            return printFactoral();
+        }
     }
 
     public String toString2(){
         return first + " " + sign + " " + second + " = " +"\n"+ twoVal();
     }
 
-    public double factoral(){
+    public int factoral(){
         double result = 1;
         while( first >1) {
             result = result * first;
             first--;
         }
-        return result;
+        return (int)result;
+    }
+
+    public String printFactoral() {
+        return sign  + (int)first + " = " + "\n" + factoral();
     }
 
 

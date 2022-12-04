@@ -133,7 +133,8 @@ public class Calc {
         return sign  + (int)first + " = " + "\n" + factoral();
     }
 
-    public double express(int nov){
+    public double express(int numOfVal){
+
         String current = expression.substring(0, expression.length()-1);
         double num =0;
 //        int space =0 ;
@@ -141,13 +142,13 @@ public class Calc {
 //            space++;
 //        }
 //        int fspace = space/2 +2;
-        while(nov > 0){
+        while(numOfVal > 0){
             double value = Double.parseDouble(current.substring(0, current.indexOf(" ")));
-            if(current.length() >3) {
+            if(current.length() >3 && current.contains("+")) {
                 current = current.substring(current.indexOf(" ") + 3);
             }
             num += value;
-            nov --;
+            numOfVal --;
         }
 
         return num;

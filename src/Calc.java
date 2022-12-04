@@ -7,6 +7,7 @@ public class Calc {
     private String expression;
     private String sign;
     private double radian;
+    private int numOfValues;
 
     //constructor class
     public Calc(double one, double two, String sign) {
@@ -132,22 +133,26 @@ public class Calc {
         return sign  + (int)first + " = " + "\n" + factoral();
     }
 
-//    public double express(){
-//        String current = expression;
-//        double num =0;
-//        int space =0;
-//        for(int i =0; i < expression.length() && expression.substring(i, i+1).equals(" ");i ++){
+    public double express(int nov){
+        String current = expression.substring(0, expression.length()-1);
+        double num =0;
+//        int space =0 ;
+//        for(int i = 0; i < current.length() && current.charAt(i) == ' '; i ++){
 //            space++;
 //        }
-//        while(space !=0){
-//            double value = Double.parseDouble(expression.substring(0, expression.indexOf(" ")));
-//            current = expression.substring(expression.indexOf(" ")+ 2);
-//            num += value;
-//            space --;
-//        }
-//        return num;
-//
-//    }
+//        int fspace = space/2 +2;
+        while(nov > 0){
+            double value = Double.parseDouble(current.substring(0, current.indexOf(" ")));
+            if(current.length() >3) {
+                current = current.substring(current.indexOf(" ") + 3);
+            }
+            num += value;
+            nov --;
+        }
+
+        return num;
+
+    }
 
 
 

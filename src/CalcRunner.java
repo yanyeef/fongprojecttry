@@ -41,10 +41,10 @@ public class CalcRunner {
                 Calc twoNumbers = new Calc(fV, sV, sign);
                 System.out.println(twoNumbers.toString2());
             }
-//            else {
-//               Calc express = new Calc(expression);
-//               System.out.println(express.express());
-//          }
+            else {
+               Calc express = new Calc(expression);
+               System.out.println(express.express(numOfValues));
+          }
 
 
             }

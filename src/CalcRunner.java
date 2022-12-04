@@ -42,8 +42,9 @@ public class CalcRunner {
                 System.out.println(twoNumbers.toString2());
             }
             else {
-               Calc express = new Calc(expression);
-               System.out.println(express.express(numOfValues));
+                String signEX = expression.substring(expression.indexOf(" ") + 1, expression.indexOf(" ") + 2);
+               Calc express = new Calc(expression, signEX);
+               System.out.println(express.expressionAdd(numOfValues, signEX));
           }
 
 

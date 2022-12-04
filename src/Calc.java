@@ -29,8 +29,9 @@ public class Calc {
         this.second = 0;
     }
 
-    public Calc(String expression){
+    public Calc(String expression, String sign){
         this.expression = expression;
+        this.sign = sign;
     }
     public void zero(){
         int zero = 0;
@@ -130,29 +131,25 @@ public class Calc {
     }
 
     public String printFactoral() {
-        return sign  + (int)first + " = " + "\n" + factoral();
+        return (int)first + sign  + " = " + "\n" + factoral();
     }
 
-    public double express(int numOfVal){
+    public double expressionAdd(int numOfVal, String sign){
 
         String current = expression.substring(0, expression.length()-1);
         double num =0;
-//        int space =0 ;
-//        for(int i = 0; i < current.length() && current.charAt(i) == ' '; i ++){
-//            space++;
-//        }
-//        int fspace = space/2 +2;
-        while(numOfVal > 0){
-            double value = Double.parseDouble(current.substring(0, current.indexOf(" ")));
-            if(current.length() >3 && current.contains("+")) {
-                current = current.substring(current.indexOf(" ") + 3);
+
+        if(sign.equals("+")) {
+            while (numOfVal > 0) {
+                double value = Double.parseDouble(current.substring(0, current.indexOf(" ")));
+                if (current.length() > 3 && current.contains("+")) {
+                    current = current.substring(current.indexOf(" ") + 3);
+                }
+                num += value;
+                numOfVal--;
             }
-            num += value;
-            numOfVal --;
         }
-
         return num;
-
     }
 
 
